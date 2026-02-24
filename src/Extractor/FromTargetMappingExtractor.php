@@ -59,6 +59,14 @@ final class FromTargetMappingExtractor extends MappingExtractor
                 }
             }
 
+            if (\count($types) === 1) {
+                return $types[0];
+            }
+
+            if (\count($types) === 0) {
+                return null;
+            }
+
             return new Type\UnionType(...$types);
         }
 
@@ -71,6 +79,14 @@ final class FromTargetMappingExtractor extends MappingExtractor
                 if ($transformedType) {
                     $types[] = $transformedType;
                 }
+            }
+
+            if (\count($types) === 1) {
+                return $types[0];
+            }
+
+            if (\count($types) === 0) {
+                return null;
             }
 
             return new Type\IntersectionType(...$types);
