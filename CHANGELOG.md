@@ -5,7 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [10.0.1] - 2025-24-02
+
+### Fixed
+- [GH#325](https://github.com/jolicode/automapper/pull/325) Fix creating union or intersection type when not enough types.
+
+## [10.0.0] - 2025-10-02
 ### Added
 - [GH#297](https://github.com/jolicode/automapper/pull/297) Support PHP 8.5 and Symfony 8, this library now use the `TypeInfo` Component for types instead of PropertyInfo directly.
 - [GH#297](https://github.com/jolicode/automapper/pull/297) Debug command now show the type of each property mapped, transformers will also display more information.
