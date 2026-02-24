@@ -25,7 +25,7 @@ class ArrayTransformerFactoryTest extends TestCase
         $factory->setChainTransformerFactory($chainFactory);
         $mapperMetadata = $this->getMockBuilder(MapperMetadata::class)->disableOriginalConstructor()->getMock();
 
-        $sourceMapperMetadata = new SourcePropertyMetadata('foo', type: Type::array());
+        $sourceMapperMetadata = new SourcePropertyMetadata('foo', type: Type::array(key: Type::int()));
         $targetMapperMetadata = new TargetPropertyMetadata('foo', type: Type::array());
         $transformer = $factory->getTransformer($sourceMapperMetadata, $targetMapperMetadata, $mapperMetadata);
 

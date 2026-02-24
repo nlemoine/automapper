@@ -49,11 +49,11 @@ final class ArrayTransformerFactory implements TransformerFactoryInterface, Prio
 
             $sourceCollectionKeyType = $sourceType instanceof Type\CollectionType ? $sourceType->getCollectionKeyType() : Type::mixed();
 
-            if ($sourceCollectionKeyType instanceof Type\BuiltinType && $sourceCollectionKeyType->getTypeIdentifier() !== TypeIdentifier::INT) {
-                return new DictionaryTransformer($subItemTransformer);
+            if ($sourceCollectionKeyType instanceof Type\BuiltinType && $sourceCollectionKeyType->getTypeIdentifier() === TypeIdentifier::INT) {
+                return new ArrayTransformer($subItemTransformer);
             }
 
-            return new ArrayTransformer($subItemTransformer);
+            return new DictionaryTransformer($subItemTransformer);
         }
 
         return null;

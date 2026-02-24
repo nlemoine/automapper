@@ -784,7 +784,7 @@ class AutoMapperTest extends AutoMapperTestCase
         $dto = $this->autoMapper->map($user, Fixtures\UserDTOProperties::class);
 
         self::assertInstanceOf(Fixtures\UserDTOProperties::class, $dto);
-        self::assertSame([0 => 'bar'], $dto->getProperties());
+        self::assertSame(['foo' => 'bar'], $dto->getProperties());
     }
 
     public function testAdderAndRemoverWithClass(): void
