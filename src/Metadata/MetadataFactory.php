@@ -303,13 +303,13 @@ final class MetadataFactory
                 if ($propertyMappedEvent->transformer === null) {
                     $propertyMappedEvent->ignoreReason = 'Property cannot be read from source.';
                 } else {
-                    $propertyMappedEvent->ignoreReason = 'Property cannot be read from source, and the attached transformer `' . $propertyMappedEvent->transformer::class . '` require a value.';
+                    $propertyMappedEvent->ignoreReason = 'Property cannot be read from source, and the attached transformer `' . $propertyMappedEvent->transformer::class . '` requires a value.';
                 }
             }
 
             if ($targetPropertyMetadata->writeMutator === null && $targetPropertyMetadata->parameterInConstructor === null) {
                 $propertyMappedEvent->ignored = true;
-                $propertyMappedEvent->ignoreReason = 'Property cannot be write on target.';
+                $propertyMappedEvent->ignoreReason = 'Property cannot be written on target.';
             }
 
             $propertiesMapping[] = new PropertyMetadata(
