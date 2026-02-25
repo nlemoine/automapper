@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace AutoMapper\Generator;
 
+use AutoMapper\LazyMapper;
 use AutoMapper\Metadata\Dependency;
 use AutoMapper\Metadata\GeneratorMetadata;
 use PhpParser\Node\Arg;
 use PhpParser\Node\Expr;
+use PhpParser\Node\Name;
 use PhpParser\Node\Scalar;
 use PhpParser\Node\Stmt;
 
@@ -53,7 +55,8 @@ final readonly class InjectMapperMethodStatementsGenerator
                         new Expr\PropertyFetch(new Expr\Variable('this'), 'mappers'),
                         new Scalar\String_($dependency->mapperDependency->name)
                     ),
-                    new Expr\MethodCall($automapperRegistryVariable, 'getMapper', [
+                    new Expr\New_(new Name(LazyMapper::class), [
+                        new Arg($automapperRegistryVariable),
                         new Arg(new Scalar\String_($dependency->mapperDependency->source)),
                         new Arg(new Scalar\String_($dependency->mapperDependency->target)),
                     ])
