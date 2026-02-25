@@ -53,16 +53,17 @@ return static function (ContainerConfigurator $container) {
 
     if (interface_exists(AdapterInterface::class)) {
         $container->services()
-            ->set('automapper.property_info.cache_pool_extractor', ArrayAdapter::class)
+            ->set('automapper.property_info.source_cache_pool_extractor', ArrayAdapter::class)
+            ->set('automapper.property_info.target_cache_pool_extractor', ArrayAdapter::class)
             ->set('automapper.property_info.cached_source_property_info_extractor', PropertyInfoCacheExtractor::class)
                 ->args([
                     service('automapper.property_info.source_property_info_extractor'),
-                    service('automapper.property_info.cache_pool_extractor'),
+                    service('automapper.property_info.source_cache_pool_extractor'),
                 ])
             ->set('automapper.property_info.cached_target_property_info_extractor', PropertyInfoCacheExtractor::class)
                 ->args([
                     service('automapper.property_info.target_property_info_extractor'),
-                    service('automapper.property_info.cache_pool_extractor'),
+                    service('automapper.property_info.target_cache_pool_extractor'),
                 ])
             ->alias('automapper.property_info.source_type_extractor', 'automapper.property_info.cached_source_property_info_extractor')
             ->alias('automapper.property_info.target_type_extractor', 'automapper.property_info.cached_target_property_info_extractor')
