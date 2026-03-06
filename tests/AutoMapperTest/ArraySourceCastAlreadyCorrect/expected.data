@@ -1,0 +1,11 @@
+AutoMapper\Tests\AutoMapperTest\ArraySourceCastAlreadyCorrect\Dto {
+  +ids: [
+    1
+    2
+    3
+  ]
+  +names: [
+    "Alice"
+    "Bob"
+  ]
+}

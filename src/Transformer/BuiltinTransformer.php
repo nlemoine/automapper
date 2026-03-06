@@ -36,6 +36,7 @@ final readonly class BuiltinTransformer implements TransformerInterface, CheckTy
             TypeIdentifier::INT->value => Cast\Int_::class,
             TypeIdentifier::STRING->value => Cast\String_::class,
             TypeIdentifier::FLOAT->value => 'toFloat',
+            TypeIdentifier::BOOL->value => Cast\Bool_::class,
             TypeIdentifier::ARRAY->value => 'toArray',
             TypeIdentifier::ITERABLE->value => 'toArray',
         ],
