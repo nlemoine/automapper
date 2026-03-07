@@ -136,7 +136,7 @@ class UrlTransformer implements PropertyTransformerSupportInterface
     
     public function supports(SourcePropertyMetadata $source, TargetPropertyMetadata $target, MapperMetadata $mapperMetadata): bool
     {
-        return $source->type->isIdentifiedBy(TypeIdentifier::INT && $source->property === 'id' && $target->property === 'url';
+        return $source->type->isIdentifiedBy(TypeIdentifier::INT) && $source->property === 'id' && $target->property === 'url';
     }
     
     public function transform(mixed $value, object|array $source, array $context): mixed
@@ -191,7 +191,7 @@ class UrlTransformer implements PropertyTransformerComputeInterface
     
     public function supports(SourcePropertyMetadata $source, TargetPropertyMetadata $target, MapperMetadata $mapperMetadata): bool
     {
-        return $source->type->isIdentifiedBy(TypeIdentifier::INT && $source->property === 'id' && $target->property === 'url';
+        return $source->type->isIdentifiedBy(TypeIdentifier::INT) && $source->property === 'id' && $target->property === 'url';
     }
 
     public function compute(SourcePropertyMetadata $source, TargetPropertyMetadata $target, MapperMetadata $mapperMetadata): mixed
