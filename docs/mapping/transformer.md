@@ -173,7 +173,7 @@ When multiple transformers can be applied, the one with the highest priority wil
 ### Computing extra data for the transformer
 
 In some cases you may want to compute extra data that will be passed to the transformer. This is possible by 
-implementing the `PropertyTransformerDataProviderInterface` interface.
+implementing the `PropertyTransformerComputeInterface` interface.
 
 ```php
 namespace App\Transformer;
