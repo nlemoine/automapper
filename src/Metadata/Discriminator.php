@@ -7,7 +7,7 @@ namespace AutoMapper\Metadata;
 final readonly class Discriminator
 {
     public function __construct(
-        /** @var array<string, class-string<object>> */
+        /** @var array<string, class-string> */
         public array $mapping,
         public ?string $propertyName = null,
     ) {
