@@ -1,0 +1,12 @@
+AutoMapper\Tests\AutoMapperTest\ArraySourceCastObjects\ContainerDto {
+  +items: [
+    AutoMapper\Tests\AutoMapperTest\ArraySourceCastObjects\ItemDto {
+      +id: 1
+      +name: "First"
+    }
+    AutoMapper\Tests\AutoMapperTest\ArraySourceCastObjects\ItemDto {
+      +id: 2
+      +name: "Second"
+    }
+  ]
+}

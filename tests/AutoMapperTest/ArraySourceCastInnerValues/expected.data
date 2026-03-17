@@ -1,0 +1,22 @@
+AutoMapper\Tests\AutoMapperTest\ArraySourceCastInnerValues\Dto {
+  +ids: [
+    1
+    2
+    3
+  ]
+  +prices: [
+    9.99
+    19.99
+  ]
+  +labels: [
+    "1"
+    "2"
+    "3"
+  ]
+  +flags: [
+    true
+    false
+    true
+    false
+  ]
+}

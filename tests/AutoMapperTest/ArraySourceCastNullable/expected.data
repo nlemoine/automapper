@@ -1,0 +1,7 @@
+AutoMapper\Tests\AutoMapperTest\ArraySourceCastNullable\Dto {
+  +values: [
+    1
+    null
+    3
+  ]
+}

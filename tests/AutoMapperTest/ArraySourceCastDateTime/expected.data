@@ -1,0 +1,10 @@
+AutoMapper\Tests\AutoMapperTest\ArraySourceCastDateTime\Dto {
+  +dates: [
+    DateTimeImmutable @1705314600 {
+      date: 2024-01-15 10:30:00.0 +00:00
+    }
+    DateTimeImmutable @1718892000 {
+      date: 2024-06-20 14:00:00.0 +00:00
+    }
+  ]
+}
