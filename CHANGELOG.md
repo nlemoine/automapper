@@ -5,16 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+## [10.1.0] - 2026-18-03
+### Added
+- [GH#328](https://github.com/jolicode/automapper/pull/328) Register mappers as lazy to reduce initialization calls when sub mappers are not used
+
+### Fixed
+- [GH#333](https://github.com/jolicode/automapper/pull/333) Fix incompatibility with `class-string<object>` notation
+- [GH#330](https://github.com/jolicode/automapper/pull/330) Cast inner values of array properties when mapping from untyped sources
+
+### Documentation
+- [GH#332](https://github.com/jolicode/automapper/pull/332) Update interface name in transformer documentation for compute
+- [GH#331](https://github.com/jolicode/automapper/pull/331) Fix syntax error in supports method return statement example
+- [GH#329](https://github.com/jolicode/automapper/pull/329) Fix some typos
+
 ## [10.0.3] - 2025-25-02
 - [GH#327](https://github.com/jolicode/automapper/pull/327) Fix cache extractor in symfony bundle being mixed between source and target.
 
 ## [10.0.2] - 2025-24-02
-
 ### Fixed
 - [GH#326](https://github.com/jolicode/automapper/pull/326) Fix array, be consistent with old behavior, undefined array should be mapped with their keys.
 
 ## [10.0.1] - 2025-24-02
-
 ### Fixed
 - [GH#325](https://github.com/jolicode/automapper/pull/325) Fix creating union or intersection type when not enough types.
 
@@ -458,7 +471,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 * [AutoMapper] [GH#179](https://github.com/janephp/janephp/pull/179) Fixing incompatible changes in Symfony 5.0
 
-[Unreleased]: https://github.com/jolicode/automapper/compare/10.0.0...HEAD
+[Unreleased]: https://github.com/jolicode/automapper/compare/10.1.0...HEAD
+[10.1.0]: https://github.com/jolicode/automapper/compare/10.0.3...10.1.0
+[10.0.3]: https://github.com/jolicode/automapper/compare/10.0.2...10.0.3
+[10.0.2]: https://github.com/jolicode/automapper/compare/10.0.1...10.0.2
+[10.0.1]: https://github.com/jolicode/automapper/compare/10.0.0...10.0.1
 [10.0.0]: https://github.com/jolicode/automapper/compare/9.5.0...10.0.0
 [9.5.0]: https://github.com/janephp/janephp/compare/9.4.1...9.5.0
 [9.4.1]: https://github.com/janephp/janephp/compare/9.4.0...9.4.1
